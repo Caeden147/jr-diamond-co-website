@@ -56,6 +56,26 @@ function applyPackagesData(root, packages) {
   });
 }
 
+function applyPriceTeaser(root, packages) {
+  root = root || document;
+  if (!packages || !packages.length) return;
+
+  var min = null;
+  packages.forEach(function (pkg) {
+    if (!pkg.price) return;
+    var match = pkg.price.match(/[\d.]+/);
+    if (!match) return;
+    var value = parseFloat(match[0]);
+    if (min === null || value < min) min = value;
+  });
+  if (min === null) return;
+
+  var display = '$' + (min % 1 === 0 ? min.toFixed(0) : min);
+  root.querySelectorAll('[data-price-teaser-amount]').forEach(function (el) {
+    el.textContent = display;
+  });
+}
+
 function fetchJSON(path) {
   return fetch(path, { cache: 'no-cache' }).then(function (res) {
     return res.ok ? res.json() : null;
@@ -68,7 +88,11 @@ function initContentData() {
     .catch(function () { /* keep static fallback markup */ });
 
   fetchJSON('data/packages.json')
-    .then(function (data) { if (data && data.packages) applyPackagesData(document, data.packages); })
+    .then(function (data) {
+      if (!data || !data.packages) return;
+      applyPackagesData(document, data.packages);
+      applyPriceTeaser(document, data.packages);
+    })
     .catch(function () { /* keep static fallback markup */ });
 }
 

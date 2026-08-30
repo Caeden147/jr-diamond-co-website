@@ -348,6 +348,27 @@ section { padding-top: var(--section-pad); }
   color: var(--gold);
 }
 .work-link:hover { color: var(--gold-hover); }
+
+.price-teaser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 28px);
+  align-items: baseline;
+  justify-content: space-between;
+  padding: clamp(20px, 2.6vw, 30px) clamp(24px, 3vw, 40px);
+  border: 1px solid var(--hairline-14);
+}
+.price-teaser p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(17px, 1.8vw, 24px);
+  letter-spacing: .01em;
+  color: var(--text);
+}
+.price-teaser-amount { color: var(--gold); }
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -408,7 +429,14 @@ figcaption.cap {
   /* duration scales with card count so scroll speed stays constant (9 reviews) */
   animation: jrMarquee 69s linear infinite;
 }
-.marquee-track:hover { animation-play-state: paused; }
+/* hover-to-pause was removed: the track spans all 18 cards, so a cursor
+   resting anywhere over the review row (routine while scrolling to read)
+   froze the whole strip indefinitely, which read as a static duplicate
+   set rather than a moving marquee. prefers-reduced-motion is the correct
+   mechanism for letting a visitor stop the motion instead. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused; }
+}
 .review-card {
   flex: 0 0 auto;
   width: min(86vw, 360px);
