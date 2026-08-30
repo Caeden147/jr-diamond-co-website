@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "business"
+    label: "Business Info"
+    files:
+      - name: "location"
+        label: "Location & Service Area"
+        file: "data/business.json"
+        fields:
+          - { label: "Area Summary", name: "areaSummary", widget: "string", hint: "Short line shown on the Contact page (e.g. mobile-only / no storefront)." }
+          - { label: "Service Area Cities", name: "cities", widget: "string", hint: "Comma-separated list of cities/towns, e.g. \"Birmingham, Vestavia Hills, Hoover\". Order is preserved as shown on the site." }
+
+  - name: "packages"
+    label: "Detailing Packages"
+    files:
+      - name: "packages"
+        label: "Packages & Pricing"
+        file: "data/packages.json"
+        fields:
+          - label: "Packages"
+            name: "packages"
+            widget: "list"
+            min: 4
+            max: 4
+            hint: "Always exactly 4 packages, in this fixed order: Deep Wash & Decon, Interior Detailing, Glass Treatment, Maintenance Plans. Do not add, remove, or reorder entries."
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Price", name: "price", widget: "string", hint: "Exact display string, e.g. \"From $175\" or \"$120 / mo\"." }

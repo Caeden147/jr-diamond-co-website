@@ -1,0 +1,8 @@
+{
+  "packages": [
+    { "name": "Deep Wash & Decon", "description": "Foam bath, iron and tar decon, hand dry, ceramic seal. Water beads for months.", "price": "From $175" },
+    { "name": "Interior Detailing", "description": "Leather, vinyl and wood cleaned and conditioned. Carpets extracted. Switchgear by hand.", "price": "From $225" },
+    { "name": "Glass Treatment", "description": "Hydrophobic polish on every pane. Rain leaves on its own; night glare drops off.", "price": "From $95" },
+    { "name": "Maintenance Plans", "description": "Weekly, biweekly or monthly. Same window every visit, so the finish never resets.", "price": "$120 / mo" }
+  ]
+}
