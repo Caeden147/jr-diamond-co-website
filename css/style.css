@@ -653,26 +653,48 @@ main.page-main { padding: clamp(44px, 6vw, 96px) var(--pad-x) 0; }
 .book-col h2 { margin: 0 0 clamp(16px, 2.2vw, 26px); font-family: var(--font-heading); font-weight: 600; text-transform: uppercase; font-size: clamp(22px, 2.2vw, 32px); line-height: 1; letter-spacing: -.01em; color: var(--heading); }
 .scheduler-embed {
   min-height: clamp(360px, 44vw, 520px);
-  padding: clamp(20px, 3vw, 32px);
+  padding: clamp(26px, 3.4vw, 40px);
   border: 1px solid var(--hairline-14);
 }
-.booking-picker { display: flex; flex-wrap: wrap; gap: 10px; }
+.booking-kicker {
+  margin: 0 0 clamp(14px, 1.8vw, 20px);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--muted-42);
+}
+.booking-picker { display: flex; flex-wrap: wrap; gap: clamp(10px, 1.4vw, 14px); }
 .booking-picker-btn {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 12px;
-  letter-spacing: .14em;
+  font-size: 12.5px;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  padding: 12px 18px;
+  padding: 14px 22px;
   border: 1px solid var(--hairline-28);
   background: transparent;
   color: var(--text);
   cursor: pointer;
-  transition: border-color .25s, color .25s, background .25s;
+  transition: border-color .25s, color .25s, background .25s, box-shadow .25s;
 }
 .booking-picker-btn:hover { border-color: var(--gold); color: var(--gold); }
-.booking-picker-btn.is-active { border-color: var(--gold); background: var(--gold); color: var(--bg); }
-.booking-prompt { margin: clamp(24px, 4vw, 40px) 0 0; text-align: center; font-size: 14px; color: var(--muted-5); }
+.booking-picker-btn.is-active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--bg);
+  box-shadow: 0 14px 34px -18px rgba(200, 168, 106, .55);
+}
+.booking-notice {
+  margin: clamp(20px, 2.6vw, 28px) 0 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--gold-6);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted-74);
+}
+.booking-notice strong { color: var(--text); font-weight: 600; }
+.booking-prompt { margin: clamp(22px, 3vw, 34px) 0 0; font-size: 14px; color: var(--muted-5); }
 .booking-cal-mount { margin-top: clamp(20px, 3vw, 28px); min-height: 600px; width: 100%; }
 .book-btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: clamp(16px, 2.2vw, 26px); }
 .book-btn-row .btn { padding: 16px 30px; }
