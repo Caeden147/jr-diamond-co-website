@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="Detailing Packages &amp; Pricing — Birmingham, AL | J&amp;R Diamond Co">
 <meta name="twitter:description" content="Standard Detail, Basic Interior Detail, Full Interior Detail and Full Detail — bundled and priced by vehicle size, mobile across greater Birmingham, Alabama.">
 <meta name="twitter:image" content="https://jrdiamondco.com/images/og-jr-diamond-co-mobile-detailing-birmingham.jpg">
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,7 +73,7 @@
   </div>
 </nav>
 
-<main class="page-main">
+<main class="page-main page-packages">
   <div class="wrap">
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -91,11 +91,28 @@
       </div>
     </div>
 
-    <nav class="package-rail" aria-label="Jump to a package">
-      <a href="#standard-detail"><span class="idx">01</span>Standard Detail</a>
-      <a href="#basic-interior-detail"><span class="idx">02</span>Basic Interior</a>
-      <a href="#full-interior-detail"><span class="idx">03</span>Full Interior</a>
-      <a href="#full-detail"><span class="idx">04</span>Full Detail</a>
+    <nav class="pkg-compare-rail" aria-label="Compare packages" data-reveal-group>
+      <a href="#standard-detail" class="pkg-compare-item" data-package-summary="standard-detail">
+        <span class="pkg-compare-idx">01</span>
+        <span class="pkg-compare-name" data-package-name>Standard Detail</span>
+        <span class="pkg-compare-price" data-package-price-from>From $95</span>
+      </a>
+      <a href="#basic-interior-detail" class="pkg-compare-item" data-package-summary="basic-interior-detail">
+        <span class="pkg-compare-idx">02</span>
+        <span class="pkg-compare-name" data-package-name>Basic Interior Detail</span>
+        <span class="pkg-compare-price" data-package-price-from>From $75</span>
+      </a>
+      <a href="#full-interior-detail" class="pkg-compare-item" data-package-summary="full-interior-detail">
+        <span class="pkg-compare-idx">03</span>
+        <span class="pkg-compare-name" data-package-name>Full Interior Detail</span>
+        <span class="pkg-compare-price" data-package-price-from>From $120</span>
+      </a>
+      <a href="#full-detail" class="pkg-compare-item is-featured" data-package-summary="full-detail">
+        <span class="pkg-compare-idx">04</span>
+        <span class="pkg-compare-name" data-package-name>Full Detail</span>
+        <span class="pkg-compare-price" data-package-price-from>From $170</span>
+        <span class="pkg-compare-badge">Most Popular</span>
+      </a>
     </nav>
 
     <section class="service-block" id="standard-detail" data-reveal data-package="standard-detail">
@@ -136,7 +153,7 @@
       </div>
     </section>
 
-    <section class="service-block is-flipped" id="basic-interior-detail" data-reveal data-package="basic-interior-detail">
+    <section class="service-block" id="basic-interior-detail" data-reveal data-package="basic-interior-detail">
       <div class="service-block-grid">
         <div>
           <p class="service-num">02</p>
@@ -199,9 +216,10 @@
       </div>
     </section>
 
-    <section class="service-block is-flipped" id="full-detail" data-reveal data-package="full-detail">
+    <section class="service-block is-featured" id="full-detail" data-reveal data-package="full-detail">
       <div class="service-block-grid">
         <div>
+          <p class="pkg-badge">Most Popular</p>
           <p class="service-num">04</p>
           <h2 data-package-name>Full Detail</h2>
           <p class="service-blurb" data-package-description>Exterior ceramic sealant and complete interior detail — top to bottom.</p>
@@ -234,7 +252,7 @@
               </ul>
             </div>
           </div>
-          <a href="contact.html?service=full-detail#book" class="btn btn-secondary service-book-link">Book this package</a>
+          <a href="contact.html?service=full-detail#book" class="btn btn-primary service-book-link">Book this package</a>
         </div>
         <figure class="service-figure">
           <div class="photo-frame"><img src="images/range-rover-ceramic-coating-mountain-brook-al.jpg" width="1320" height="1175" alt="Range Rover with ceramic sealant applied to paint after a full detail in Mountain Brook AL" loading="lazy" decoding="async"></div>
