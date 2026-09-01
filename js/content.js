@@ -126,7 +126,11 @@ function applyServicesData(root, data) {
 
       if (nameEl && svc.name) nameEl.textContent = svc.name;
       if (descEl && svc.description) descEl.textContent = svc.description;
-      if (priceEl && svc.price) priceEl.textContent = svc.price;
+      if (priceEl && svc.price) {
+        priceEl.textContent = svc.price;
+        // a figure reads as a figure; anything without one is a quote line
+        priceEl.classList.toggle('is-quote', !/\d/.test(svc.price));
+      }
       if (ctaEl && svc.cta) {
         if (svc.cta.label) ctaEl.textContent = svc.cta.label + ' →';
         if (svc.cta.href) ctaEl.setAttribute('href', svc.cta.href);
