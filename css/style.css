@@ -610,6 +610,7 @@ main.page-main { padding: clamp(44px, 6vw, 96px) var(--pad-x) 0; }
 .page-head-note { margin: 0; max-width: 44ch; font-size: clamp(15px, 1.05vw, 17px); color: var(--muted-6); }
 
 /* ---------- Services page: categories ---------- */
+.page-services .page-head + section[aria-label="Individual services"] { padding-top: 0; }
 .svc-category {
   border-top: 1px solid var(--hairline-16);
   margin-top: clamp(64px, 8vw, 120px);
