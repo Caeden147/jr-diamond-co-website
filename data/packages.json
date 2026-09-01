@@ -1,24 +1,93 @@
 {
   "packages": [
     {
-      "name": "Deep Wash & Decon",
-      "description": "Foam bath, iron and tar decon, hand dry, ceramic seal. Water beads for months.",
-      "price": "From $175"
+      "slug": "standard-detail",
+      "name": "Standard Detail",
+      "description": "Foam bath, wax and a full interior vacuum — the everyday reset.",
+      "pricing": { "sedan": 95, "suv": 120, "largeSuvTruck": 150 },
+      "groups": [
+        {
+          "label": "Exterior",
+          "items": [
+            "Complete outdoor foam bath",
+            "Applied tire shine",
+            "Exterior windows cleaned",
+            "Car wax"
+          ]
+        },
+        {
+          "label": "Interior (Basic)",
+          "items": [
+            "Vacuum completely (seats, carpets, trunk/cargo area)",
+            "UV protection applied to interior surfaces"
+          ]
+        }
+      ]
     },
     {
-      "name": "Interior Detailing",
-      "description": "Leather, vinyl and wood cleaned and conditioned. Carpets extracted. Switchgear by hand.",
-      "price": "From $225"
+      "slug": "basic-interior-detail",
+      "name": "Basic Interior Detail",
+      "description": "A clean, protected cabin — vacuum and UV protection, nothing skipped.",
+      "pricing": { "sedan": 75, "suv": 95, "largeSuvTruck": 120 },
+      "groups": [
+        {
+          "label": "Included",
+          "items": [
+            "Vacuum completely (seats, carpets, mats, trunk/cargo area)",
+            "UV protection applied to interior surfaces"
+          ]
+        }
+      ]
     },
     {
-      "name": "Glass Treatment",
-      "description": "Hydrophobic polish on every pane. Rain leaves on its own; night glare drops off.",
-      "price": "From $95"
+      "slug": "full-interior-detail",
+      "name": "Full Interior Detail",
+      "description": "Leather cleaned and conditioned, every surface hand-detailed.",
+      "pricing": { "sedan": 120, "suv": 150, "largeSuvTruck": 165 },
+      "groups": [
+        {
+          "label": "Included",
+          "items": [
+            "Vacuum completely (seats, carpets, mats, trunk/cargo area)",
+            "Remove pet hair (+$50, may vary by amount)",
+            "UV protection applied to interior surfaces",
+            "Clean leather",
+            "Shine for leather",
+            "Interior glass and mirrors cleaned",
+            "Detailed cleaning of center console, switches and vents"
+          ]
+        }
+      ]
     },
     {
-      "name": "Maintenance Plans",
-      "description": "Weekly, biweekly or monthly. Same window every visit, so the finish never resets.",
-      "price": "$120 / mo"
+      "slug": "full-detail",
+      "name": "Full Detail",
+      "description": "Exterior ceramic sealant and complete interior detail — top to bottom.",
+      "pricing": { "sedan": 170, "suv": 190, "largeSuvTruck": 250 },
+      "groups": [
+        {
+          "label": "Exterior",
+          "items": [
+            "Complete outdoor foam bath",
+            "Ceramic sealant applied to paint (6-month protection)",
+            "Wheels and tires thoroughly cleaned",
+            "Applied tire shine",
+            "Exterior windows cleaned",
+            "Gloss on plastics",
+            "Removal of insects/tar from front and mirrors"
+          ]
+        },
+        {
+          "label": "Interior",
+          "items": [
+            "Vacuum completely (seats, carpets, mats, trunk/cargo area)",
+            "UV protection applied to interior surfaces",
+            "Clean leather and shine",
+            "Interior glass and mirrors cleaned",
+            "Detailed cleaning of center console, switches and vents"
+          ]
+        }
+      ]
     }
   ]
 }

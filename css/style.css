@@ -604,6 +604,97 @@ main.page-main { padding: clamp(44px, 6vw, 96px) var(--pad-x) 0; }
 .service-figure .photo-frame img { height: clamp(280px, 36vw, 520px); object-fit: cover; }
 .fine-print { margin: clamp(36px, 4.4vw, 72px) 0 0; max-width: 56ch; font-size: 15px; color: var(--muted-55); }
 
+.page-head-note { margin: 0; max-width: 44ch; font-size: clamp(15px, 1.05vw, 17px); color: var(--muted-6); }
+
+/* ---------- Individual services (compact cards) ---------- */
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(24px, 4vw, 72px);
+}
+.service-card {
+  border: 1px solid var(--hairline-14);
+  padding: clamp(24px, 2.8vw, 34px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.4vw, 16px);
+}
+.service-card.is-placeholder { border-style: dashed; }
+.service-card h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(20px, 1.8vw, 28px);
+  line-height: 1.02;
+  letter-spacing: -.01em;
+  color: var(--heading);
+}
+.service-card .desc { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--muted-64); }
+.service-card .price { margin: 0; font-family: var(--font-heading); font-size: clamp(17px, 1.5vw, 22px); color: var(--gold); }
+.service-card .work-link { margin-top: auto; }
+.service-card-flag {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold-85);
+}
+
+/* ---------- Add-ons ---------- */
+.addons-block { margin-top: clamp(40px, 5vw, 80px); }
+.subsection-h {
+  margin: 0 0 clamp(16px, 2.2vw, 26px);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(22px, 2.2vw, 32px);
+  line-height: 1;
+  letter-spacing: -.01em;
+  color: var(--heading);
+}
+
+/* ---------- Package tiered pricing + grouped included lists ---------- */
+.package-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--hairline-12);
+  border-bottom: 1px solid var(--hairline-12);
+  margin: 0 0 clamp(20px, 2.4vw, 30px);
+}
+.package-tiers div {
+  padding: clamp(14px, 1.6vw, 20px) clamp(6px, 1.2vw, 12px);
+  text-align: center;
+  border-left: 1px solid var(--hairline-12);
+}
+.package-tiers div:first-child { border-left: none; }
+.package-tiers .tier-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 10.5px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted-42);
+  margin-bottom: 6px;
+}
+.package-tiers .tier-price {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 1.6vw, 24px);
+  color: var(--gold);
+}
+
+.package-groups { display: flex; flex-direction: column; gap: clamp(16px, 2vw, 24px); margin-bottom: clamp(18px, 2.2vw, 28px); }
+.package-group-label {
+  margin: 0 0 8px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--gold-85);
+}
+
 .where-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));

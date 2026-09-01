@@ -1,0 +1,62 @@
+{
+  "services": [
+    {
+      "slug": "exterior-detailing",
+      "name": "Exterior Detailing",
+      "description": "Foam bath, iron and tar decontamination, hand dry and a protective finish — paint, wheels and glass brought back to a show-ready shine. Pairs with any package.",
+      "price": null,
+      "placeholder": false,
+      "cta": { "label": "See Packages", "href": "services.html#packages" }
+    },
+    {
+      "slug": "interior-detailing",
+      "name": "Interior Detailing",
+      "description": "Leather, vinyl and wood cleaned and conditioned, carpets extracted, switchgear detailed by hand — on its own or bundled into a package.",
+      "price": null,
+      "placeholder": false,
+      "cta": { "label": "See Packages", "href": "services.html#packages" }
+    },
+    {
+      "slug": "paint-correction",
+      "name": "Paint Correction",
+      "description": "Machine polishing to reduce swirl marks, light scratches and oxidation ahead of a sealant or coating. Scope and pricing to be confirmed.",
+      "price": null,
+      "placeholder": true,
+      "cta": { "label": "Get a Quote", "href": "contact.html" }
+    },
+    {
+      "slug": "ceramic-coating",
+      "name": "Ceramic Coating",
+      "description": "A multi-year standalone coating — distinct from the 6-month ceramic sealant included in the Full Detail package. Scope and pricing to be confirmed.",
+      "price": null,
+      "placeholder": true,
+      "cta": { "label": "Get a Quote", "href": "contact.html" }
+    },
+    {
+      "slug": "glass-treatment",
+      "name": "Glass Treatment",
+      "description": "Hydrophobic polish on every pane. Rain leaves on its own; night glare drops off.",
+      "price": "From $95",
+      "placeholder": false,
+      "cta": { "label": "Book this service", "href": "contact.html?service=glass-treatment#book" }
+    },
+    {
+      "slug": "maintenance-plans",
+      "name": "Maintenance Plans",
+      "description": "Weekly, biweekly or monthly. Same window every visit, so the finish never resets.",
+      "price": "$120 / mo",
+      "placeholder": false,
+      "cta": { "label": "Book this service", "href": "contact.html?service=maintenance-plans#book" }
+    }
+  ],
+  "addOns": {
+    "note": "The base price does not include the cleaning of food scraps, excessive dirt, stains or pet hair. These services require an additional budget depending on the condition of the vehicle.",
+    "items": [
+      { "name": "Steam disinfection", "price": "Sedan $40–70 · SUV $60–100 · Large SUV $90–150" },
+      { "name": "Clay Bar", "price": "$70–120" },
+      { "name": "Leather conditioner", "price": "Sedan $40 · SUV $50 · SUV (3 rows) $60 · SUV/Truck $70" },
+      { "name": "60 Day Premium Scent Treatment", "price": "$25" },
+      { "name": "Remove pet hair", "price": "+$50 (may vary by amount)" }
+    ]
+  }
+}

@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="Book Mobile Detailing in Birmingham, AL | J&amp;R Diamond Co">
 <meta name="twitter:description" content="Call (850) 624-0711 or email jrdiamondco@gmail.com to book a mobile detail in greater Birmingham, Alabama.">
 <meta name="twitter:image" content="https://jrdiamondco.com/images/og-jr-diamond-co-mobile-detailing-birmingham.jpg">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,10 +86,12 @@
           <div class="scheduler-embed" id="scheduler-embed">
             <p class="booking-kicker">Choose a service</p>
             <div class="booking-picker" data-booking-picker role="tablist" aria-label="Choose a service">
-              <button type="button" class="booking-picker-btn" data-select-package="0" aria-pressed="false">Deep Wash &amp; Decon</button>
-              <button type="button" class="booking-picker-btn" data-select-package="1" aria-pressed="false">Interior Detailing</button>
-              <button type="button" class="booking-picker-btn" data-select-package="2" aria-pressed="false">Glass Treatment</button>
-              <button type="button" class="booking-picker-btn" data-select-package="3" aria-pressed="false">Maintenance Plans</button>
+              <button type="button" class="booking-picker-btn" data-select-package="standard-detail" aria-pressed="false">Standard Detail</button>
+              <button type="button" class="booking-picker-btn" data-select-package="basic-interior-detail" aria-pressed="false">Basic Interior Detail</button>
+              <button type="button" class="booking-picker-btn" data-select-package="full-interior-detail" aria-pressed="false">Full Interior Detail</button>
+              <button type="button" class="booking-picker-btn" data-select-package="full-detail" aria-pressed="false">Full Detail</button>
+              <button type="button" class="booking-picker-btn" data-select-package="glass-treatment" aria-pressed="false">Glass Treatment</button>
+              <button type="button" class="booking-picker-btn" data-select-package="maintenance-plans" aria-pressed="false">Maintenance Plans</button>
             </div>
             <p class="booking-notice"><strong>Please note</strong> — deposits are non-refundable. Your card is charged to hold the slot once you confirm a time.</p>
             <p class="booking-prompt" data-booking-prompt>Choose a service above to see available times.</p>
@@ -136,34 +138,44 @@
     <section aria-label="Services and starting prices" data-reveal>
       <h2 class="section-h" style="margin-bottom:clamp(20px,2.6vw,36px)">Starting prices</h2>
       <div class="price-rows">
-        <a href="?service=detail#book" class="price-row" data-package="0">
-          <h3 data-package-name>Deep Wash &amp; Decon</h3>
-          <p class="note" data-package-description>Foam bath, iron and tar decon, hand dry, ceramic seal. Water beads for months.</p>
-          <p class="price" data-package-price>From $175</p>
+        <a href="services.html#packages" class="price-row" data-package-summary="standard-detail">
+          <h3 data-package-name>Standard Detail</h3>
+          <p class="note" data-package-description>Foam bath, wax and a full interior vacuum — the everyday reset.</p>
+          <p class="price" data-package-price-from>From $95</p>
         </a>
-        <a href="?service=interior-detailing1#book" class="price-row" data-package="1">
-          <h3 data-package-name>Interior Detailing</h3>
-          <p class="note" data-package-description>Leather, vinyl and wood cleaned and conditioned. Carpets extracted. Switchgear by hand.</p>
-          <p class="price" data-package-price>From $225</p>
+        <a href="services.html#packages" class="price-row" data-package-summary="basic-interior-detail">
+          <h3 data-package-name>Basic Interior Detail</h3>
+          <p class="note" data-package-description>A clean, protected cabin — vacuum and UV protection, nothing skipped.</p>
+          <p class="price" data-package-price-from>From $75</p>
         </a>
-        <a href="?service=glass-treatment#book" class="price-row" data-package="2">
-          <h3 data-package-name>Glass Treatment</h3>
-          <p class="note" data-package-description>Hydrophobic polish on every pane. Rain leaves on its own; night glare drops off.</p>
-          <p class="price" data-package-price>From $95</p>
+        <a href="services.html#packages" class="price-row" data-package-summary="full-interior-detail">
+          <h3 data-package-name>Full Interior Detail</h3>
+          <p class="note" data-package-description>Leather cleaned and conditioned, every surface hand-detailed.</p>
+          <p class="price" data-package-price-from>From $120</p>
         </a>
-        <a href="?service=maintnance-plans#book" class="price-row" data-package="3">
-          <h3 data-package-name>Maintenance Plans</h3>
-          <p class="note" data-package-description>Weekly, biweekly or monthly. Same window every visit, so the finish never resets.</p>
-          <p class="price" data-package-price>$120 / mo</p>
+        <a href="services.html#packages" class="price-row" data-package-summary="full-detail">
+          <h3 data-package-name>Full Detail</h3>
+          <p class="note" data-package-description>Exterior ceramic sealant and complete interior detail — top to bottom.</p>
+          <p class="price" data-package-price-from>From $170</p>
+        </a>
+        <a href="?service=glass-treatment#book" class="price-row" data-package="glass-treatment" data-service="glass-treatment">
+          <h3 data-service-name>Glass Treatment</h3>
+          <p class="note" data-service-description>Hydrophobic polish on every pane. Rain leaves on its own; night glare drops off.</p>
+          <p class="price" data-service-price>From $95</p>
+        </a>
+        <a href="?service=maintenance-plans#book" class="price-row" data-package="maintenance-plans" data-service="maintenance-plans">
+          <h3 data-service-name>Maintenance Plans</h3>
+          <p class="note" data-service-description>Weekly, biweekly or monthly. Same window every visit, so the finish never resets.</p>
+          <p class="price" data-service-price>$120 / mo</p>
         </a>
         <span class="price-rows-close"></span>
       </div>
       <p class="fine-print" style="margin-top:clamp(18px,2.4vw,30px)">Final pricing depends on size and condition. Send a photo with your request and we confirm before the appointment.</p>
     </section>
 
-    <section aria-label="Where we work" data-reveal>
+    <section aria-label="Service area" data-reveal>
       <div class="where-grid">
-        <h2>Where we work</h2>
+        <h2>Proudly Serving Greater Birmingham</h2>
         <div class="col">
           <p>On site across Vestavia Hills, Hoover and Mountain Brook, with regular stops in Brook Highland, Eagle Point and Meadowbrook. North of the city we run to Warrior, Kimberly and Brookside on scheduled days.</p>
           <p>Outside the list? Send the address — if we can get to the vehicle, we can usually get there.</p>
@@ -204,7 +216,7 @@
 </footer>
 
 <script src="js/main.js?v=5"></script>
-<script src="js/content.js?v=2"></script>
-<script src="js/booking.js?v=1"></script>
+<script src="js/content.js?v=3"></script>
+<script src="js/booking.js?v=2"></script>
 </body>
 </html>

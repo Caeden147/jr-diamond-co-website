@@ -28,8 +28,57 @@ collections:
             widget: "list"
             min: 4
             max: 4
-            hint: "Always exactly 4 packages, in this fixed order: Deep Wash & Decon, Interior Detailing, Glass Treatment, Maintenance Plans. Do not add, remove, or reorder entries."
+            hint: "Always exactly 4 packages, in this fixed order: Standard Detail, Basic Interior Detail, Full Interior Detail, Full Detail. Do not add, remove, or reorder entries — each package's booking link is tied to its Slug."
             fields:
+              - { label: "Slug", name: "slug", widget: "string", hint: "Do not change — this must exactly match the Cal.com booking event and the site's internal links.", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and hyphens only"] }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", hint: "One short line shown on the package card." }
+              - label: "Pricing"
+                name: "pricing"
+                widget: "object"
+                fields:
+                  - { label: "Sedan", name: "sedan", widget: "number", value_type: "int" }
+                  - { label: "SUV", name: "suv", widget: "number", value_type: "int" }
+                  - { label: "Large SUV / Truck", name: "largeSuvTruck", widget: "number", value_type: "int" }
+              - label: "Included groups"
+                name: "groups"
+                widget: "list"
+                hint: "One group per section shown on the card, e.g. \"Exterior\" and \"Interior\". A single-group package (like Basic Interior Detail) can use one group labeled \"Included\"."
+                fields:
+                  - { label: "Group label", name: "label", widget: "string" }
+                  - { label: "Items", name: "items", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+
+  - name: "services"
+    label: "Individual Services & Add-Ons"
+    files:
+      - name: "services"
+        label: "Services & Add-Ons"
+        file: "data/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            hint: "Individual services shown on the Services page, separate from Packages. Do not add or remove entries without also updating the site's booking links."
+            fields:
+              - { label: "Slug", name: "slug", widget: "string", hint: "Do not change — this must exactly match the site's internal links.", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and hyphens only"] }
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-              - { label: "Price", name: "price", widget: "string", hint: "Exact display string, e.g. \"From $175\" or \"$120 / mo\"." }
+              - { label: "Price", name: "price", widget: "string", required: false, hint: "Leave blank for a descriptive-only service with no set price (e.g. Exterior Detailing, Interior Detailing)." }
+              - { label: "Pricing not yet confirmed", name: "placeholder", widget: "boolean", default: false, hint: "Turn on for a new service whose real pricing hasn't been set yet — shows a \"Pricing to be confirmed\" flag on the card and excludes it from the homepage \"Detailing from $X\" price." }
+              - label: "Call to action"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "href", widget: "string" }
+          - label: "Add-Ons"
+            name: "addOns"
+            widget: "object"
+            fields:
+              - { label: "Disclaimer note", name: "note", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
