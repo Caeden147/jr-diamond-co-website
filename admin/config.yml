@@ -48,6 +48,32 @@ collections:
                   - { label: "Group label", name: "label", widget: "string" }
                   - { label: "Items", name: "items", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
 
+  - name: "maintenance"
+    label: "Maintenance Plans"
+    files:
+      - name: "maintenance"
+        label: "Maintenance Schedules & Pricing"
+        file: "data/maintenance.json"
+        fields:
+          - label: "Plans"
+            name: "plans"
+            widget: "list"
+            min: 5
+            max: 5
+            hint: "Always exactly 5 plans, in this fixed order: Weekly, Every 2 Weeks, Monthly, Every 3 Months, Every 6 Months. Do not add, remove, or reorder entries. All plans book through the same \"Maintenance Plans\" Cal.com event, so slugs are display-only here."
+            fields:
+              - { label: "Slug", name: "slug", widget: "string", hint: "Display-only identifier, lowercase letters/numbers/hyphens only.", pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and hyphens only"] }
+              - { label: "Frequency", name: "frequency", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", hint: "One short line shown on the plan card." }
+              - label: "Pricing"
+                name: "pricing"
+                widget: "object"
+                fields:
+                  - { label: "Car", name: "car", widget: "number", value_type: "int" }
+                  - { label: "SUV", name: "suv", widget: "number", value_type: "int" }
+                  - { label: "Truck", name: "truck", widget: "number", value_type: "int" }
+              - { label: "Most Popular", name: "featured", widget: "boolean", default: false, hint: "Turn on for exactly one plan to mark it as the recommended schedule." }
+
   - name: "services"
     label: "Individual Services & Add-Ons"
     files:

@@ -163,6 +163,30 @@ function applyServicesData(root, data) {
   }
 }
 
+function applyMaintenanceData(root, data) {
+  root = root || document;
+  if (!data || !data.plans) return;
+
+  root.querySelectorAll('[data-plan]').forEach(function (el) {
+    var slug = el.getAttribute('data-plan');
+    var plan = data.plans.filter(function (p) { return p.slug === slug; })[0];
+    if (!plan) return;
+
+    var freqEl = el.querySelector('[data-plan-frequency]');
+    var descEl = el.querySelector('[data-plan-description]');
+
+    if (freqEl && plan.frequency) freqEl.textContent = plan.frequency;
+    if (descEl && plan.description) descEl.textContent = plan.description;
+
+    if (plan.pricing) {
+      ['car', 'suv', 'truck'].forEach(function (tier) {
+        var tierEl = el.querySelector('[data-plan-tier="' + tier + '"]');
+        if (tierEl && plan.pricing[tier] != null) tierEl.textContent = '$' + plan.pricing[tier];
+      });
+    }
+  });
+}
+
 function computePriceFloor(packages, services) {
   var candidates = [];
   (packages || []).forEach(function (pkg) {
@@ -205,6 +229,10 @@ function initContentData() {
     if (data) applyServicesData(document, data);
     return (data && data.services) || null;
   }).catch(function () { return null; });
+
+  fetchJSON('data/maintenance.json')
+    .then(function (data) { if (data) applyMaintenanceData(document, data); })
+    .catch(function () { /* keep static fallback markup */ });
 
   Promise.all([packagesPromise, servicesPromise]).then(function (results) {
     var min = computePriceFloor(results[0], results[1]);

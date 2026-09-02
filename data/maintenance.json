@@ -1,0 +1,39 @@
+{
+  "plans": [
+    {
+      "slug": "weekly",
+      "frequency": "Weekly",
+      "description": "For vehicles that stay outside or see daily driving — the shortest interval, so buildup never gets the chance to set in.",
+      "pricing": { "car": 75, "suv": 90, "truck": 95 },
+      "featured": false
+    },
+    {
+      "slug": "every-2-weeks",
+      "frequency": "Every 2 Weeks",
+      "description": "A steady rhythm that keeps the finish consistent without a weekly commitment.",
+      "pricing": { "car": 95, "suv": 110, "truck": 120 },
+      "featured": false
+    },
+    {
+      "slug": "monthly",
+      "frequency": "Monthly",
+      "description": "Our most requested schedule — enough to keep everyday grime from settling in between visits.",
+      "pricing": { "car": 125, "suv": 145, "truck": 155 },
+      "featured": true
+    },
+    {
+      "slug": "every-3-months",
+      "frequency": "Every 3 Months",
+      "description": "A quarterly check-in for vehicles driven less often or kept garaged most of the week.",
+      "pricing": { "car": 175, "suv": 195, "truck": 210 },
+      "featured": false
+    },
+    {
+      "slug": "every-6-months",
+      "frequency": "Every 6 Months",
+      "description": "A seasonal refresh for occasional drivers who still want the finish looked after.",
+      "pricing": { "car": 225, "suv": 250, "truck": 275 },
+      "featured": false
+    }
+  ]
+}
